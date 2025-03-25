@@ -77,7 +77,7 @@ class UserController extends Controller
         if (Auth::attempt(['email' => $validatedData['email'], 'password' => $validatedData['password']])) {
             // Autenticación exitosa, generar el token
             $user = Auth::user();
-            $token = $user->createToken('YourAppName')->plainTextToken;
+            $token = $user->createToken('ERPMM')->plainTextToken;
 
             // Responder con el token
             return response()->json(['token' => $token]);
